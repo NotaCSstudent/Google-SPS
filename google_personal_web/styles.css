@@ -12,23 +12,29 @@ body
     
     background-color: #333333;
     text-align: center;
+    overflow: hidden;
 }
 
 
+
+
+
+/*Outer Container*/
 .container
 {
-    width: 100%;
-    max-width: 50vh;
+   
+   
     min-height: 30vh;
-    position: relative;
-    max-height: 30vh;
-    margin: 10vh auto;
-    position: relative;
+   
+    margin-left: 30vh auto;
+    
+    position: absolute;
+    padding: 5vh;
     display: flex;
     flex-direction: row;
 }
 
-
+/*Inner Container*/
 .container .box
 {
     background-color: #030202;
@@ -38,11 +44,22 @@ body
     margin-bottom: 20px;
     width: 50vh;
     min-height: 30vh;
+    margin: 3vh;
+    justify-content: 5vh;
 
 }
 
 
+/* hover */
+.container .box:hover
+{
+    transition: all 0.5s ease;
+    background-color: #ffffff;
+    color: #030202;
+}
 
+
+/* card */
 .container .box .card
 {
     background-color: #120f0f;
@@ -50,4 +67,26 @@ body
     border-radius: 3px;
     padding: 20px;
     margin-bottom: 20px;
+}
+
+/* hover inner container without messing with card*/
+.container .box:hover .card
+{
+    transition: all 1.5s ease;
+    background-color: #a2a2a2;
+    color: #030202;
+    border-radius: 34vh;
+
+}
+/* hover inner container without messing with h1*/
+.container .box:hover h1
+{
+    transition: all 1.5s ease;
+    color: #000000;
+}
+.container .box:hover .card:hover
+{
+    transition: all 0.5s ease;
+    background-color: #ffffff;
+    color: #030202;
 }
